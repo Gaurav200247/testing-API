@@ -1,11 +1,15 @@
+// Config
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config();
+}
+
 require("express-async-errors");
-require("dotenv").config();
 
 const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("GET request success");
+  res.send("Welcome to my app");
 });
 
 app.post("/", (req, res) => {
@@ -15,5 +19,5 @@ app.post("/", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log("listening on PORT 5000");
+  console.log(`listening on port ${PORT}... at http://localhost:${PORT}/`);
 });
