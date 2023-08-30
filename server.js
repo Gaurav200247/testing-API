@@ -12,9 +12,9 @@ app.get("/", (req, res) => {
   res.send("Welcome to my app");
 });
 
-app.post("/", (req, res) => {
-  res.send("POST request success");
-});
+// app.post("/", (req, res) => {
+//   res.send("POST request success");
+// });
 
 const PORT = process.env.PORT || 5000;
 
